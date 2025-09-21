@@ -11,8 +11,6 @@ int main (){
   float area2, pib2, densidade2, capita2, superpoder2;
   unsigned long int populacao2;
 
-  int resultado;
-
   // CARTA 1
   printf("Digite a letra do estado da carta 1: \n");
   scanf(" %c", &estado1);
@@ -34,6 +32,7 @@ int main (){
 
   printf("Digite o número de pontos turísticos da carta 1: \n");
   scanf("%d", &pontosturisticos1);
+  printf("\n");
 
   // CARTA 2
   printf("Digite a letra do estado da carta 2: \n");
@@ -56,6 +55,7 @@ int main (){
 
   printf("Digite o número de pontos turísticos da carta 2: \n");
   scanf("%d", &pontosturisticos2);
+  printf("\n");
 
   // CÁLCULO
   densidade1 = (float)populacao1 / area1;
@@ -99,7 +99,7 @@ int main (){
   printf("Número de Pontos Turísticos: %d\n", pontosturisticos1 > pontosturisticos2);
   printf("Densidade Populacional: %d\n", densidade1 < densidade2);
   printf("PIB per Capita: %d\n", capita1 > capita2);
-  printf("Super Poder: %d\n", superpoder1 > superpoder2);
+  printf("Super Poder: %d\n\n", superpoder1 > superpoder2);
   
   return 0;
 }

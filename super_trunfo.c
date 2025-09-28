@@ -4,7 +4,7 @@ int main (){
   char estado1, codigo1[4], cidade1[20];
   int pontosturisticos1;
   float area1, pib1, densidade1, capita1, superpoder1;
-  unsigned long int populacao1;
+  unsigned long int populacao1; 
 
   char estado2, codigo2[4], cidade2[20];
   int pontosturisticos2;

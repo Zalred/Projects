@@ -1,4 +1,5 @@
-🃏 Jogo de Cartas – Super Trunfo
+🃏 Super Trunfo
+
 Este é um jogo de comparação de cartas feito em C da Estácio.
 Cada carta representa uma cidade brasileira, com os seguintes atributos:
 

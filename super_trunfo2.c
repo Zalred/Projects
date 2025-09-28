@@ -3,7 +3,7 @@
 int main (){
   // DADOS DAS CARTAS
   char cidade1[20] = "São Paulo";
-  int populacao1 = 12325000;
+  int populacao1 = 12325000; 
   float area1 = 1521.11, pib1 = 699.28, densidade1 = (float)populacao1 / area1; // CÁLCULO DA DENSIDADE1
 
   char cidade2[20] = "Rio de Janeiro";

@@ -1,36 +1,52 @@
-#include <stdio.h>
+#include <stdio.h> // Biblioteca de funções básicas (printf, scanf)
+
+void movertorre (int casas){ // Ação void 'movertorre', executada apenas uma vez, sem retorno, com int 'casas'
+    if (casas > 0){ // Se o número de casas for maior que 0, o código vai ser executado
+        printf("Direita\n"); // Código de printar (imprimir) mensagem
+        movertorre(casas -1); // No final da etapa, será removido 1 do número da int 'casas'
+    }
+}
+
+// O mesmo acontece aqui
+void moverbispo (int casas){ 
+    if (casas > 0){
+        printf("Cima, Direita\n");
+        moverbispo(casas -1);
+    }
+}
+
+// Versão com loop aninhado, um for dentro de um for
+void moverbispoloop (int casas){
+    for (int i = 0; i < casas; i++){
+        for (int j = 0; j < 1; j++){
+            printf("Cima, Direita\n");
+        }
+    }
+}
+
+void moverRainha (int casas){
+    if (casas > 0){
+        printf("Esquerda\n");
+        moverRainha(casas -1);
+    }
+}
+
+void movercavalo (int casas){
+    for (int i = 0; i < 1; i++){
+        for (int j = 0; j < casas; j++){
+            printf("Cima\n");
+        }
+        for (int k = 0; k < 1; k++){
+            printf("Direita\n");
+        }
+    }
+}
 
 int main (){
-
-    int bispo = 0, rainha = 0, movcavalo = 1;
-
-    printf("Torre: ");
-    for (int torre = 0; torre < 5; torre++) {
-        printf("Direita >>\t");
-    }
-    printf("\n\n");
-
-    printf("Bispo: ");
-    while (bispo < 5) {
-        printf("Cima ^^ Direita >>\t");
-        bispo++;
-    }
-    printf("\n\n");
-    
-    printf("Rainha: ");
-    do {
-        printf("Esquerda <<\t");
-        rainha++;
-    } while (rainha < 8);
-    printf("\n\n");
-
-    printf("Cavalo: \n");
-    while (movcavalo--) { // Condição externa, vai ser removido 1 dessa variável após a condição interna finalizar
-        for (int cavalo = 0; cavalo < 2; cavalo++) { // Condição interna, vai ser somado 1 no valor da variável após ela rodar uma vez
-            printf("Baixo\n"); // Vai ser printado "Baixo" até o valor da variável ser 2 (cavalo++)
-        }
-        printf("Esquerda\n\n"); // Vai ser printado "Esquerda" até o valor da variável ser 0 (movcavalo--)
-    }
-    
-return 0;
+    movertorre(5);
+    moverbispo(5);
+    moverbispoloop(5);
+    moverRainha(8);
+    movercavalo(2);
+    return 0;
 }
